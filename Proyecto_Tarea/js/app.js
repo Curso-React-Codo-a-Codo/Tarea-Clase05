@@ -48,5 +48,5 @@ function CrearInpunt(input){
     myInput.render();
 }
 
-let array_filtered = Array_of_inputs.filter(Array_of_inputs => Array_of_inputs.length < 5 )
+let array_filtered = Array_of_inputs.filter(Array_of_inputs => Array_of_inputs == "password" )
 array_filtered.forEach(element => CrearInpunt(element));
