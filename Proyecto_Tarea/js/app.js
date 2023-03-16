@@ -48,5 +48,5 @@ function CrearInpunt(input){
     myInput.render();
 }
 
-//array_filter = Array_of_inputs.filter(Array_of_inputs => Array_of_inputs.length < 5 )
-Array_of_inputs.forEach(element => CrearInpunt(element));
+let array_filtered = Array_of_inputs.filter(Array_of_inputs => Array_of_inputs.length < 5 )
+array_filtered.forEach(element => CrearInpunt(element));
