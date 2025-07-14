@@ -48,5 +48,18 @@ function CrearInpunt(input){
     myInput.render();
 }
 
+async function mostrarIP() {
+  try {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    const ipDiv = document.getElementById('MyApp');
+    ipDiv.innerHTML = <p>Tu dirección IP es: ${data.ip}</p>;
+  } catch (error) {
+    console.error('Error obteniendo la IP:', error);
+  }
+}
+
+mostrarIP();
+
 let array_filtered = Array_of_inputs.filter(Array_of_inputs => Array_of_inputs == "password" )
 array_filtered.forEach(element => CrearInpunt(element));
