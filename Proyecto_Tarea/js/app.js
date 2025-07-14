@@ -53,7 +53,7 @@ async function mostrarIP() {
     const response = await fetch('https://api.ipify.org?format=json');
     const data = await response.json();
     const ipDiv = document.getElementById('MyApp');
-    ipDiv.innerHTML = <p>Tu dirección IP es: ${data.ip}</p>;
+    ipDiv.innerHTML = `<p>Tu dirección IP es: ${data.ip}</p>`;
   } catch (error) {
     console.error('Error obteniendo la IP:', error);
   }
